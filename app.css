@@ -2,6 +2,13 @@ body {
     text-align: center;
 }
 
-#inline {
-    display: inline;
+.inline {
+    float: left;
+    margin: 10px 15px;
+    width: 10%;
+    padding: 0 0;
+}
+
+.contain {
+    margin: 0px 25%;
 }
