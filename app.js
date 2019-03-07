@@ -41,7 +41,11 @@ class tailsButton extends React.Component {
 
   render() {
     if (this.state.liked) {
-      return 'You chose tails';
+      if (coinToss() === "tails") {
+        return 'You win!';
+      } else {
+        return 'You lose!';
+      }
     }
 
     return e(
@@ -56,7 +60,6 @@ class tailsButton extends React.Component {
 
 const domContainer1 = document.querySelector('#heads_button_container');
 const domContainer2 = document.querySelector('#tails_button_container');
-const domContainer3 = document.querySelector('#result');
 
 
 ReactDOM.render(e(headsButton), domContainer1);
