@@ -1,5 +1,11 @@
 'use strict';
 
+
+function coinToss() {
+  // This function will randomly return either 'heads' or 'tails'.
+  return Math.random() < 0.5 ? 'heads' : 'tails';
+}
+
 const e = React.createElement;
 
 class headsButton extends React.Component {
@@ -9,8 +15,13 @@ class headsButton extends React.Component {
   }
 
   render() {
-    if (this.state.liked) {
-      return 'You chose heads';
+
+    if(this.state.liked){
+      if (coinToss() === "heads") {
+        return 'You win!';
+      } else {
+        return 'You lose!';
+      }
     }
 
     return e(
