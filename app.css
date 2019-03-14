@@ -1,7 +1,11 @@
 body {
     text-align: center;
+    background-color: #ebc34c;
 }
 
+h1 {
+    color: white;
+}
 
 button {
     outline: none;
